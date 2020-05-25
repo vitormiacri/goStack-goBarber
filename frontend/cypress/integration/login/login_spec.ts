@@ -44,14 +44,24 @@ describe('Login tests', () => {
     );
   });
 
-  it('should be able validate user email', () => {
+  it('should be able validate user credentials', () => {
+    const errorMessage = {
+      message: 'Incorrect email/password combination.',
+      status: 'error',
+    };
+    cy.server();
+    cy.route({
+      method: 'POST',
+      url: 'sessions',
+    }).as('postLogin');
+
     cy.get('form').find(':nth-child(2) > input').type('vitorr@email.com');
     cy.get('form').find(':nth-child(3) > input').type('123456');
-    cy.get('form').submit().next();
+    cy.get('[data-cy=btn-login]').click();
 
-    cy.get('.sc-AxhUy > .sc-AxgMl div > div > p').should(
-      'contains',
-      'Ocorreu um erro ao fazer login, cheque as credenciais',
-    );
+    cy.wait('@postLogin').should(xhr => {
+      expect(xhr.status).eq(401);
+      expect(xhr.response.body).contain(errorMessage);
+    });
   });
 });
