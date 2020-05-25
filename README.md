@@ -5,7 +5,7 @@
 </p>
 
 Bem-vindo ao projeto GoBarber!
-Esta é aplicação completa (Backend, Frontend e Mobile) para gerenciamento de barbearias.
+Esta é aplicação completa (Backend, Frontend e Mobile, ainda em desenvolvimento) para gerenciamento de barbearias.
 
 ## Instalação
 
