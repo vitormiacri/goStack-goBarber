@@ -5,7 +5,7 @@
 </p>
 
 Bem-vindo ao projeto GoBarber!
-Esta é aplicação completa (Backend, Frontend e Mobile, ainda em desenvolvimento) para gerenciamento de barbearias.
+Esta é uma aplicação completa (Backend, Frontend e Mobile, ainda em desenvolvimento) para gerenciamento de barbearias.
 
 ## Instalação
 
@@ -14,8 +14,8 @@ Esta é aplicação completa (Backend, Frontend e Mobile, ainda em desenvolvimen
 Antes de tudo clone este repositório e acesse a pasta do projeto:
 
 ```bash
-git clone https://github.com/vitormiacri/goStack-goBarber.git gympoint
-cd gympoint
+git clone https://github.com/vitormiacri/goStack-goBarber.git gobarber
+cd gobarber
 ```
 
 ### Backend
