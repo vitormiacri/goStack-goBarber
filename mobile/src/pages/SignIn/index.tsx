@@ -15,7 +15,7 @@ import { Form } from '@unform/mobile';
 import * as Yup from 'yup';
 
 import logoImg from '../../assets/logo.png';
-import { useAuth } from '../../hooks/Auth';
+import { useAuth } from '../../hooks/auth';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -40,7 +40,7 @@ const SignIn: React.FC = () => {
   const navigation = useNavigation();
   const formRef = useRef<FormHandles>(null);
   const passwordInputRef = useRef<TextInput>(null);
-  const { signIn, user } = useAuth();
+  const { signIn } = useAuth();
 
   const handleSignIn = useCallback(
     async (data: SignInFormData) => {
